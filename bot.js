@@ -31,8 +31,8 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === prefix + 'Basic_JasonYT') {
-    msg.reply('Here is his latest video! (https://www.youtube.com/watch?v=drEXz6-27Fc&t=20s)');
+  if (msg.content === prefix + 'Basic_Jason') {
+    msg.reply('Check out Basic_Jason! (https://www.youtube.com/channel/UCDMlZxgtx4yPN05-itAPD4Q?view_as=subscriber)');
   }
 });
 
