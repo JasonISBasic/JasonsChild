@@ -74,7 +74,8 @@ client.on('message', msg => {
   }
 });
 
- if(command === "say") {
+ client.on('message', msg => {
+   if (msg.content === prefix + "say") {
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});  
     message.channel.send(sayMessage);
