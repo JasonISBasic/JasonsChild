@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!"
+const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -71,6 +73,12 @@ client.on('message', msg => {
     msg.author.send('Hehehe, We know!! XD (Just kidding)');
   }
 });
+
+ if(command === "say") {
+    const sayMessage = args.join(" ");
+    message.delete().catch(O_o=>{});  
+    message.channel.send(sayMessage);
+  }
 
 
 
