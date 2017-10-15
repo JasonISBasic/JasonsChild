@@ -1,8 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!"
-const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-const command = args.shift().toLowerCase();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -74,12 +72,6 @@ client.on('message', msg => {
   }
 });
 
- client.on('message', msg => {
-   if (msg.content === prefix + "say") {
-    const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{});  
-    message.channel.send(sayMessage);
-  }
 
 
 
